@@ -696,3 +696,222 @@ header nav .form i {
     display: block;
 }
 /* End Quote */
+/* Start Pricing */
+.pricing .container .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.pricing .plans .plan {
+    background-color: #fCFCFC;
+    text-align: center;
+}
+.pricing .plans .plan .head {
+    padding: 40px 20px;
+    border-block: 1px solid var(--main-color);
+}
+.pricing .plans .plan .head h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.pricing .plans .plan .head span {
+    font-size: 60px;
+    font-weight: bold;
+}
+.pricing .plans .plan .head span::before {
+    content: "$";
+    position: relative;
+    font-size: 25px;
+    top: -40px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+.pricing .plans .plan .head span::after {
+    content: "/Mo";
+    position: relative;
+    font-size: 20px;
+    right: -15px;
+}
+.pricing .plans .plan ul {
+border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pricing .plans .plan a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+}
+.pricing .contact-text {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+}
+.pricing .contact-link{
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+/* End Pricing */
+
+/* Start Subscribe */
+.subscribe{
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+.subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media(max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+.subscribe .container form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+.subscribe .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+.subscribe .container form input[type="email"]{
+    border: 1px solid white;
+    border-right: none;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+}
+.subscribe form ::placeholder {
+    color: white
+}
+.subscribe .container form input[type="submit"]{
+    width: 130px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px ;
+    border: 1px solide white;
+    border-left: none;
+    text-transform: uppercase;
+}
+.subscribe .container form input[type="email"],
+.subscribe .container form input[type="submit"] {
+    outline: none;
+}
+.subscribe .container p {
+    line-height: 2;
+    margin-left: 50px;
+}
+@media (max-width: 992px){
+    .subscribe .container p {
+        margin: 30px 0 0;
+    }
+}
+/* End Subscribe */
+
+/* Start Contact */
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+    }
+    .contact .content .info {
+        order: -1;
+        text-align: center;
+    }
+    .contact .content .info h4 {
+        margin-top: 30px;
+    }
+    .contact .content .info address {
+        margin-bottom: 40px;
+    }
+}
+.contact .content form {
+    flex-basis: 70%;
+}
+.contact .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 1px solid #CCC;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.contact .content form .main-input:focus {
+    outline: none;
+}
+.contact .content form textarea.main-input {
+    height: 200px;
+}
+.contact .content form input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    border: none;
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact .content .info {
+    flex-basis: 25%;
+}
+.contact .content .info h4 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.contact .content .info .phone {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+.contact .content .info h4:nth-of-type(2) {
+    margin-top: 90px;
+}
+.contact .content .info address {
+    color: #777;
+    line-height: 2;
+}
+/* End Contact */
