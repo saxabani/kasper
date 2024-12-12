@@ -179,6 +179,7 @@ header nav .form i {
     header nav ul li a {
         padding: 20px 10px;
         width: 100%;
+        background-color: rgba(0, 0, 0, .7);
     }
     header nav ul.show {
         display: block;
